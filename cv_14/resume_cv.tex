@@ -1,0 +1,137 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Resume/CV
+% XeLaTeX Template
+% Version 1.1 (9/1/2016)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Claud D. Park (posquit0.bj@gmail.com) with modifications by 
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template must be compiled with XeLaTeX, the below lines will ensure this
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, a4paper]{awesome-cv} % A4 paper size by default, use 'letterpaper' for US letter
+
+\geometry{left=2cm, top=1.5cm, right=2cm, bottom=2cm, footskip=.5cm} % Configure page margins with geometry
+
+\fontdir[fonts/] % Specify the location of the included fonts
+
+% Color for highlights
+\colorlet{awesome}{awesome-red} % Default colors include: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange, awesome-nephritis, awesome-concrete, awesome-darknight
+%\definecolor{awesome}{HTML}{CA63A8} % Uncomment if you would like to specify your own color
+
+% Colors for text - uncomment and modify
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad} % If you would like to change the social information separator from a pipe (|) to something else
+
+%----------------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%----------------------------------------------------------------------------------------
+
+\name{Ioannis}{Petrousov}
+\address{152 34 Athens, Greece}
+\mobile{(+30) 6955006384}
+
+\email{petrousov@gmail.com}
+\homepage{petrousov.net}
+\github{gpetrousov}
+\linkedin{ioannispetrousov}
+%\skype{skypeid}
+%\stackoverflow{SOid}{SOname}
+%\twitter{@twit}
+
+%\position{Software Engineer{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
+\quote{``Usque ad finem."} % A quote or statement
+
+\makecvfooter{\today}{Ioannis Petrousov~~~·~~~Résumé}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\makecvheader % Print the header
+\vspace{-0.5cm}
+\paragraph{I have no problem undertaking any tests and learning new technologies.\\}
+
+\bigskip
+\noindent
+%----------------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%----------------------------------------------------------------------------------------
+
+\input{cv-sections/education.tex}
+\input{cv-sections/skills.tex}
+\input{cv-sections/experience.tex}
+\input{cv-sections/extracurricular.tex}
+\input{cv-sections/honors.tex}
+\input{cv-sections/presentation.tex}
+%\input{cv-sections/writing.tex}
+%\input{cv-sections/committees.tex}
+
+%----------------------------------------------------------------------------------------
+%\cvsection{Publications}
+%\begin{itemize}[before=\color{black}]
+%\item{I. Petrousov, M. Dasygenis, "A CAD tool for custom magnitude comparators". Paper presented at 19th Panhellenic Conference on Informatics (PCI '15), Athens Greece}
+
+%\item{I. Petrousov, M. Dasygenis, "Generating custom bitwidth 4:2 compressors in hardware description language from an online tool". Paper presented at International Conference on
+%Modern Circuits and Systems Technologies (MOCAST'15), Thessaloniki, Greece}
+
+%\item{M. Dasygenis, I. Petrousov, "Online generation of constant multiplication accelerators". Paper presented at Panhellenic Conference on Electronics and Telecommunications
+%(PACET 2015), Ioannina, Greece.}
+
+%\item{M. Dasygenis, I. Petrousov, "A networking EDA Tool for multi-vector multiplication IP circuits". Paper presented at International Conference on Design and Test of Integrated
+%Systems in Nanoscale Era (DTIS 2015), IEEE International Conference, Naples, Italy.}
+
+%\item{M. Dasygenis, I. Petrousov, "A generic moduli selection algorithm for the Residue Number System". Paper presented at International Conference on Design and Test of Integrated
+%Systems in Nanoscale Era (DTIS 2015), IEEE International Conference, Naples, Italy.}
+
+%\item{I. Petrousov, M. Dasygenis, "Designing optimized forward residue number systems IP blocks converters from a network interface". Paper presented at Panhellenic Conference on
+%Informatics (PCI 2014), Athens, Greece.}
+
+%\item{I. Petrousov, M. Dasygenis, “A unique network EDA tool to create optimized ad hoc binary to residue number system converters”. Paper presented at Power And Timing Modeling,
+%Optimization and Simulation (PATMOS 2014) conference, Palma de Mallorca.}
+%\end{itemize}
+
+\cvsection{Publications}
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliographystyle{unsrt}{\color{black}
+\bibliography{refs}
+\nocite{*}
+
+
+%----------------------------------------------------------------------------------------
+
+\cvsection{Projects}
+Most of my projects are hosted on github.
+
+\setlength\parindent{24pt}\color{black}{\textbf{\underline{redis4mesos Feb 2016}}\\
+Standalone Redis container to deploy on Mesos cluster with Marathon and route with
+HAProxy. This project was featured on Redis weekly \url{http://redisweekly.com/archive/129.html}}
+
+\setlength\parindent{24pt}\color{black}{\textbf{\underline{HDL Generator Jun 2014}}\\
+I actively participate in the design, development, debugging and optimization of an online
+HDL generator. \url{http://arch.icte.uowm.gr/hdl/}}
+%----------------------------------------------------------------------------------------
+
+\end{document}
