@@ -48,7 +48,7 @@
 %----------------------------------------------------------------------------------------
 
 \name{Ioannis}{Petrousov}
-\address{152 34 Athens, Greece}
+\address{Greece}
 \mobile{(+30) 6955006384}
 
 \email{petrousov@gmail.com}
@@ -59,8 +59,9 @@
 %\stackoverflow{SOid}{SOname}
 %\twitter{@twit}
 
-%\position{Software Engineer{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
+\position{Computer scientist}%{\enskip\cdotp\enskip}Security Expert} % Your expertise/fields
 \quote{``Usque ad finem."} % A quote or statement
+
 
 \makecvfooter{\today}{Ioannis Petrousov~~~·~~~Résumé}{\thepage} % Specify the letter footer with 3 arguments: (<left>, <center>, <right>), leave any of these blank if they are not needed
 
@@ -70,8 +71,7 @@
 
 \makecvheader % Print the header
 \vspace{-0.5cm}
-\paragraph{I have no problem undertaking any tests and learning new technologies.\\}
-
+\paragraph{I have no problem undertaking any tests, learning new technologies and moving to a different country.\\}
 \bigskip
 \noindent
 %----------------------------------------------------------------------------------------
@@ -79,12 +79,25 @@
 %	Each section is imported separately, open each file in turn to modify content
 %----------------------------------------------------------------------------------------
 
-\input{cv-sections/education.tex}
-\input{cv-sections/skills.tex}
 \input{cv-sections/experience.tex}
-\input{cv-sections/extracurricular.tex}
+\input{cv-sections/education.tex}
 \input{cv-sections/honors.tex}
+
+\cvsection{Publications}
+\begingroup
+\renewcommand{\section}[2]{}%
+\bibliographystyle{unsrt}{\color{black}
+\bibliography{refs}
+\nocite{*}
+
+\input{cv-sections/extracurricular.tex}
+
+\input{cv-sections/skills.tex}
+\cvsection{Languages}
+Greek, English, Russian
+
 \input{cv-sections/presentation.tex}
+
 %\input{cv-sections/writing.tex}
 %\input{cv-sections/committees.tex}
 
@@ -112,18 +125,11 @@
 %Optimization and Simulation (PATMOS 2014) conference, Palma de Mallorca.}
 %\end{itemize}
 
-\cvsection{Publications}
-\begingroup
-\renewcommand{\section}[2]{}%
-\bibliographystyle{unsrt}{\color{black}
-\bibliography{refs}
-\nocite{*}
-
 
 %----------------------------------------------------------------------------------------
 
 \cvsection{Projects}
-Most of my projects are hosted on github.
+My public projects are hosted on github.
 
 \setlength\parindent{24pt}\color{black}{\textbf{\underline{redis4mesos Feb 2016}}\\
 Standalone Redis container to deploy on Mesos cluster with Marathon and route with
@@ -132,6 +138,21 @@ HAProxy. This project was featured on Redis weekly \url{http://redisweekly.com/a
 \setlength\parindent{24pt}\color{black}{\textbf{\underline{HDL Generator Jun 2014}}\\
 I actively participate in the design, development, debugging and optimization of an online
 HDL generator. \url{http://arch.icte.uowm.gr/hdl/}}
+
+\setlength\parindent{24pt}\color{black}{\textbf{\underline{Meta Open Data - M.O.D. May 2014}}\\
+The website is used to present the JSON interface with data.gov.gr and facilitate machine-readable
+data sets though our API. \url{http://arch.icte.uowm.gr/mod/}
+
+\setlength\parindent{24pt}\color{black}{\textbf{\underline{roboCIM Mar 2014}}\\
+The platform allows you to control the LabVolt 5250 robotic arm on a chessboard and play chess or
+solve puzzles. \url{https://github.com/gpetrousov/roboCIM}
+
+\setlength\parindent{24pt}\color{black}{\textbf{\underline{Library Management System Jul 2013}}\\
+The purpose of this project was to understand the fundamentals of UML. Our final deliverable was
+the best semester project in the department. \url{https://goo.gl/QWZIae}
+
+
+
 %----------------------------------------------------------------------------------------
 
 \end{document}
